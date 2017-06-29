@@ -1,0 +1,22 @@
+{
+  "name": "@datarea/dataset-spec",
+  "version": "0.1.0",
+  "description": "Dataset specification for Datarea.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DatareaIO/dataset-spec.git"
+  },
+  "author": "Haoliang Yu <haholiang.yu@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DatareaIO/dataset-spec/issues"
+  },
+  "homepage": "https://github.com/DatareaIO/dataset-spec#readme",
+  "dependencies": {
+    "@types/geojson": "^1.0.2"
+  }
+}
