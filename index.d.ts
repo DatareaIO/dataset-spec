@@ -20,6 +20,12 @@ declare namespace datarea {
     format: String;
 
     /**
+     * file description (optional)
+     * @type {String}
+     */
+    description?: String;
+
+    /**
      * file extension without dot (optional)
      * @type {String}
      */
@@ -90,12 +96,6 @@ declare namespace datarea {
      * @type {Date}
      */
     createdTime?: Date;
-
-    /**
-     * dataset data url (optional)
-     * @type {String}
-     */
-    dataUrl?: String;
 
     /**
      * dataset description (optional)
