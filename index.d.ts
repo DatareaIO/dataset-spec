@@ -44,6 +44,12 @@ declare namespace datarea {
     name: String;
 
     /**
+     * data portal name
+     * @type {String}
+     */
+    portal: String;
+
+    /**
      * dateset updated time
      * @type {Date}
      */
@@ -108,6 +114,12 @@ declare namespace datarea {
      * @type {String}
      */
     publisher?: String;
+
+    /**
+     * data portal platform name
+     * @type {String}
+     */
+    platform?: String;
 
     /**
      * dataset coverage region (optional)
