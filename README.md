@@ -1,8 +1,8 @@
 # Datarea.io Dataset Specification
 
-This is the specification of dataset metadata for [Datarea.io](https://github.com/DatareaIO/datarea.io). The aim of this specification is to provide a standard to describe the information of a dataset across all applications developed under [DatareaIO](https://github.com/DatareaIO) including the [website](https://github.com/DatareaIO/datarea.io) and the [data pipeline](https://github.com/DatareaIO/datarea-pipeline). Note that this specification is an abstraction of data sources used in datarea.io and doesn't attempt to be as detailed as possible.
+This is the specification of dataset metadata for [Datarea.io](https://github.com/DatareaIO/datarea.io). The aim of this specification is to provide a standard to describe the information of a dataset across all applications developed under [DatareaIO](https://github.com/DatareaIO) including the [website](https://github.com/DatareaIO/datarea.io) and the [data pipeline](https://github.com/DatareaIO/datarea-pipeline). Note that this specification is an abstraction of various data sources used in datarea.io and doesn't attempt to be as detailed as possible.
 
-The [source code](https://github.com/DatareaIO/dataset-spec/blob/master/index.d.ts) of this specification is in [JSON schema](http://json-schema.org/) with properties defined with [TypeScript Type Declaration](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) format.
+The dataset specification follows [JSON schema](http://json-schema.org/) with properties defined using [TypeScript Type Declaration](http://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) format (see [source code](https://github.com/DatareaIO/dataset-spec/blob/master/index.d.ts)).
 
 Version: alpha
 
