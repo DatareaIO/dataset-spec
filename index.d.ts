@@ -14,10 +14,16 @@ declare namespace datarea {
     name: String;
 
     /**
-     * file format
+     * file url
+     * @type {String}
+     */
+    url: String
+
+    /**
+     * file format (optional)
      * @type  {String}
      */
-    format: String;
+    format?: String;
 
     /**
      * file description (optional)
@@ -30,12 +36,6 @@ declare namespace datarea {
      * @type {String}
      */
     extension?: String;
-
-    /**
-     * file url (optional)
-     * @type {String}
-     */
-    url?: String
   }
 
   /**
@@ -48,6 +48,11 @@ declare namespace datarea {
      * @type {String}
      */
     name: String;
+
+    /**
+     * universal unique id for this dataset in the portal
+     */
+    uuid: String;
 
     /**
      * data portal name
@@ -66,6 +71,12 @@ declare namespace datarea {
      * @type {String}
      */
     url: String;
+
+    /**
+     * dataset publisher
+     * @type {String}
+     */
+    publisher: String;
 
     /**
      * dataset tags
@@ -92,6 +103,11 @@ declare namespace datarea {
     raw: Object;
 
     /**
+     * version number of current metadata
+     */
+    version: Number;
+
+    /**
      * dataset created time (optional)
      * @type {Date}
      */
@@ -108,12 +124,6 @@ declare namespace datarea {
      * @type {String}
      */
     license?: String;
-
-    /**
-     * dataset publisher (optional)
-     * @type {String}
-     */
-    publisher?: String;
 
     /**
      * data portal platform name
