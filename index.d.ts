@@ -5,7 +5,7 @@ declare namespace datarea {
   /**
    * Definition for dataset file
    */
-  interface DatasetFile {
+  export interface DatasetFile {
 
     /**
      * file name
@@ -41,7 +41,7 @@ declare namespace datarea {
   /**
    * Definition for dataset
    */
-  interface Dataset {
+  export interface Dataset {
 
     /**
      * dataset name
