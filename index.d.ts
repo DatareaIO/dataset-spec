@@ -64,7 +64,7 @@ declare namespace datarea {
      * dateset updated time
      * @type {Date}
      */
-    updatedTime: Date;
+    updated: Date;
 
     /**
      * dataset url on the portal
@@ -111,7 +111,7 @@ declare namespace datarea {
      * dataset created time (optional)
      * @type {Date}
      */
-    createdTime?: Date;
+    created?: Date;
 
     /**
      * dataset description (optional)

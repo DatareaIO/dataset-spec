@@ -32,7 +32,7 @@ Version: alpha
 
   name of the portal where this dataset is published
 
-* **updatedTime**
+* **updated**
 
   the latest updated time for this dataset
 
@@ -66,7 +66,7 @@ Version: alpha
 
 ### Optional Properties
 
-* **createdTime**
+* **created**
 
   the time when this dataset was first created or published. This is not a require property because some portals don't provide the created time for their datasets.
 
