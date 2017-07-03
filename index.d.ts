@@ -95,12 +95,6 @@ export interface Dataset {
   files: Array<DatasetFile>;
 
   /**
-   * original dataset metadata
-   * @type {Object}
-   */
-  raw: Object;
-
-  /**
    * version number of current metadata
    */
   version: Number;
@@ -134,4 +128,10 @@ export interface Dataset {
    * @type {MultiPolygon}
    */
   region?: MultiPolygon;
+
+  /**
+   * original dataset metadata (optional)
+   * @type {Object}
+   */
+  raw?: Object;
 }
