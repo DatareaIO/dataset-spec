@@ -1,4 +1,4 @@
-import { MultiPolygon } from '@types/geojson';
+import { MultiPolygon } from 'geojson';
 
 /**
  * Definition for dataset file
