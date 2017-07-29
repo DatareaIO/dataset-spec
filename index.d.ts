@@ -1,4 +1,46 @@
-import { MultiPolygon } from 'geojson';
+import { Point, MultiPolygon } from 'geojson';
+
+/**
+ * Definition for data portal
+ */
+export interface Portal {
+
+  /**
+   * portal name
+   * @type {string}
+   */
+  name: string;
+
+  /**
+   * portal url
+   * @type {string}
+   */
+  url: string;
+
+  /**
+   * portal description
+   * @type {string}
+   */
+  description?: string;
+
+  /**
+   * portal platform
+   * @type {strint}
+   */
+  platform?: string;
+
+  /**
+   * portal location
+   * @type {strint}
+   */
+  location?: string;
+
+  /**
+   * geometry of the portal location
+   * @type {strint}
+   */
+  geometry?: Point;
+}
 
 /**
  * Definition for dataset file
@@ -7,33 +49,33 @@ export interface DatasetFile {
 
   /**
    * file name
-   * @type {String}
+   * @type {string}
    */
-  name: String;
+  name: string;
 
   /**
    * file url
-   * @type {String}
+   * @type {string}
    */
-  url: String
+  url: string
 
   /**
    * file format (optional)
-   * @type  {String}
+   * @type  {string}
    */
-  format?: String;
+  format?: string;
 
   /**
    * file description (optional)
-   * @type {String}
+   * @type {string}
    */
-  description?: String;
+  description?: string;
 
   /**
    * file extension without dot (optional)
-   * @type {String}
+   * @type {string}
    */
-  extension?: String;
+  extension?: string;
 }
 
 /**
@@ -43,20 +85,20 @@ export interface Dataset {
 
   /**
    * dataset name
-   * @type {String}
+   * @type {string}
    */
-  name: String;
+  name: string;
 
   /**
    * universal unique id for this dataset in the portal
    */
-  uuid: String;
+  uuid: string;
 
   /**
    * data portal name
-   * @type {String}
+   * @type {string}
    */
-  portal: String;
+  portal: string;
 
   /**
    * dateset updated time
@@ -66,27 +108,27 @@ export interface Dataset {
 
   /**
    * dataset url on the portal
-   * @type {String}
+   * @type {string}
    */
-  url: String;
+  url: string;
 
   /**
    * dataset publisher
-   * @type {String}
+   * @type {string}
    */
-  publisher: String;
+  publisher: string;
 
   /**
    * dataset tags
-   * @type {Array<String>}
+   * @type {Array<string>}
    */
-  tags: Array<String>;
+  tags: Array<string>;
 
   /**
    * dataset categories
-   * @type {Array<String>}
+   * @type {Array<string>}
    */
-  categories: Array<String>;
+  categories: Array<string>;
 
   /**
    * dataset files
@@ -97,7 +139,7 @@ export interface Dataset {
   /**
    * version number of current metadata
    */
-  version: Number;
+  version: number;
 
   /**
    * dataset created time (optional)
@@ -107,21 +149,21 @@ export interface Dataset {
 
   /**
    * dataset description (optional)
-   * @type {String}
+   * @type {string}
    */
-  description?: String;
+  description?: string;
 
   /**
    * dataset publication license (optional)
-   * @type {String}
+   * @type {string}
    */
-  license?: String;
+  license?: string;
 
   /**
    * data portal platform name
-   * @type {String}
+   * @type {string}
    */
-  platform?: String;
+  platform?: string;
 
   /**
    * dataset coverage region (optional)

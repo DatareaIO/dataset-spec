@@ -1,6 +1,6 @@
 {
   "name": "@singular-data/dataset-spec",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Dataset specification for SingularData.net",
   "main": "index.js",
   "scripts": {
