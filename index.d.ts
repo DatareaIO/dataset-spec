@@ -96,9 +96,9 @@ export interface Dataset {
 
   /**
    * data portal name
-   * @type {string}
+   * @type {string|Portal}
    */
-  portal: string;
+  portal: string|Portal;
 
   /**
    * dateset updated time
