@@ -8,11 +8,13 @@ Version: alpha
 
 ## Specification
 
-* [Portal](spec/portal.md)
+* Portal
 
-* [Dataset](spec/dataset.md)
+* Dataset
 
-* [Dataset File](spec/dataset-file.md)
+* Dataset Distribution
+
+The dataset specification is compatible with [W3C DCAT](https://www.w3.org/TR/vocab-dcat/).
 
 ## Source
 

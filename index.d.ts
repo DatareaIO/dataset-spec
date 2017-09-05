@@ -39,28 +39,34 @@ export interface Portal {
    * geometry of the portal location
    * @type {strint}
    */
-  geometry?: Point;
+  spatial?: Point;
 }
 
 /**
- * Definition for dataset file
+ * Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset or different endpoints. Examples of distributions include a downloadable CSV file, an API or an RSS feed
  */
-export interface DatasetFile {
+export interface Distribution {
 
   /**
    * file name
    * @type {string}
    */
-  name: string;
+  title: string;
 
   /**
-   * file url
+   * A landing page, feed, SPARQL endpoint or other type of resource that gives access to the distribution of the dataset
    * @type {string}
    */
-  url: string
+  accessURL: string
 
   /**
-   * file format (optional)
+   * A file that contains the distribution of the dataset in a given format. This url is not attached if there is no URL pointed to a file.
+   * @type {string}
+   */
+  downloadURL?: string
+
+  /**
+   * The file format of the distribution. This is only usable when the downloadURL exists.
    * @type  {string}
    */
   format?: string;
@@ -70,12 +76,6 @@ export interface DatasetFile {
    * @type {string}
    */
   description?: string;
-
-  /**
-   * file extension without dot (optional)
-   * @type {string}
-   */
-  extension?: string;
 }
 
 /**
@@ -84,15 +84,16 @@ export interface DatasetFile {
 export interface Dataset {
 
   /**
-   * dataset name
+   * dataset title
    * @type {string}
    */
-  name: string;
+  title: string;
 
   /**
    * universal unique id for this dataset in the portal
+   * @type {string}
    */
-  uuid: string;
+  identifier: string;
 
   /**
    * data portal name
@@ -101,40 +102,40 @@ export interface Dataset {
   portal: string|Portal;
 
   /**
-   * dateset updated time
+   * Most recent date on which the dataset was changed, updated or modified.
    * @type {Date}
    */
-  updated: Date;
+  modified: Date;
 
   /**
-   * dataset url on the portal
+   * A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information.
    * @type {string}
    */
-  url: string;
+  landingPage: string;
 
   /**
-   * dataset publisher
+   * An entity responsible for making the dataset available.
    * @type {string}
    */
   publisher: string;
 
   /**
-   * dataset tags
+   * A keyword or tag describing the dataset.
    * @type {Array<string>}
    */
-  tags: Array<string>;
+  keyword: Array<string>;
 
   /**
-   * dataset categories
+   * The main category of the dataset. A dataset can have multiple themes.
    * @type {Array<string>}
    */
-  categories: Array<string>;
+  theme: Array<string>;
 
   /**
    * dataset files
-   * @type {Array<DatasetFile>}
+   * @type {Array<Distribution>}
    */
-  files: Array<DatasetFile>;
+  distribution: Array<Distribution>;
 
   /**
    * version number of current metadata
@@ -142,34 +143,28 @@ export interface Dataset {
   version: number;
 
   /**
-   * dataset created time (optional)
+   * Date of formal issuance (e.g., publication) of the dataset.
    * @type {Date}
    */
-  created?: Date;
+  issued?: Date;
 
   /**
-   * dataset description (optional)
+   * Free-text account of the dataset.
    * @type {string}
    */
   description?: string;
 
   /**
-   * dataset publication license (optional)
+   * This links to the license document under which the distribution is made available.
    * @type {string}
    */
   license?: string;
 
   /**
-   * data portal platform name
-   * @type {string}
-   */
-  platform?: string;
-
-  /**
-   * dataset coverage region (optional)
+   * Spatial coverage of the dataset.
    * @type {MultiPolygon}
    */
-  region?: MultiPolygon;
+  spatial?: MultiPolygon;
 
   /**
    * original dataset metadata (optional)
